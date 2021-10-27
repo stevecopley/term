@@ -1,12 +1,13 @@
 let date = new Date();
 let month = ('0' + (date.getMonth() + 1)).slice( -2 );
-let year = date.getFullYear().toString().substr( -2 );
+let year = date.getFullYear();
+let shortYear = year.toString().substr( -2 );
 
 // Info strings
 const serverURL = 'https://dt.waimea.school.nz';
-const os = '<strong><em>COPNIX</em> (C) 1967-2020, Copley MegaSystems Inc.</strong>';
+const os = `<strong><em>COPNIX</em> (C) 1967-${year}, Copley MegaSystems Inc.</strong>`;
 const server = 'Waimea College DT Server';
-const ver = `System Version: ${year}.${month}`;
+const ver = `System Version: ${shortYear}.${month}`;
 const host = '<em>Waimea College</em> is a secondary school in Richmond, New Zealand\n' +
              ' The <em>Digital Technologies</em> department is awesome\n' +
              ' This is the <em>DT Server</em> where we keep all of our fun stuff';
